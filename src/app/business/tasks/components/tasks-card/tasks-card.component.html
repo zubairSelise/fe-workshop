@@ -1,0 +1,8 @@
+<app-card>
+	<div>
+		<h2 class="text-center text-gray-600 text-2xl font-semibold">{{ task?.title }}</h2>
+		<p [ngClass]="{ 'text-green-700': task?.completed }" class="text-center mt-2 text-gray-600">
+			{{ task?.completed ? 'This task is Completed' : 'This task is Pending' }}
+		</p>
+	</div>
+</app-card>

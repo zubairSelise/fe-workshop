@@ -1,0 +1,17 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+. "$(dirname "$0")/common.sh"
+
+printf "\n"
+echo "--------- Running eslint, prettier, stylelint formatting on staged (.ts,.html,.css) files in src/**/*  ---------"
+printf "\n"
+
+npx lint-staged
+
+printf "\n"
+echo "--------- Running jest on (.spec.ts) files in src/**/*  ---------"
+printf "\n"
+
+npx jest
+
+printf "\n"

@@ -1,0 +1,8 @@
+<div class="grid place-items-center">
+	<app-header title="Tasks List"></app-header>
+	<app-tasks-toggle (filterBy)="onFilterBy($event)"></app-tasks-toggle>
+	<app-tasks-list
+		(taskDetail)="routeToDetail($event)"
+		[tasks]="(tasks$ | async) || []"
+	></app-tasks-list>
+</div>
